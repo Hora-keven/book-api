@@ -1,0 +1,56 @@
+# Compiled binaries
+/bin/
+// Build output directory
+/obj/
+
+# User-specific files
+*.rsuser
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code files
+.vscode/
+
+# Build results
+*.build.cs
+*.cache
+*.dll
+*.exe
+*.pdb
+*.nuget/
+
+# Visual Studio workspace
+.vs/
+
+# Configuration files
+appsettings*.json
+
+# Logs
+*.log
+
+# Package directories
+/packages/
+**/node_modules/
+**/bower_components/
+
+# Temporary files
+*.tmp
+*.temp
+*.pid
+
+# IDE files
+*.ide
+
+# Rider files
+.idea/
+.idea_modules/
+
+# Generated files
+*.generated.cs
+*.g.cs
+*.AssemblyInfo.cs
+
+# Deployment
+publish/
