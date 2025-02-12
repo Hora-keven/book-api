@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using WebApi.Dto.Author;
@@ -11,6 +12,7 @@ using WebApi.Services.AuthorS;
 namespace WebApi.Controllers
 {
     [ApiController]
+    [Authorize]
     [Route("api/[controller]")]
     public class AuthorController : ControllerBase
     {
@@ -25,7 +27,7 @@ namespace WebApi.Controllers
             var authors = await _authorInterface.GetAllAuthors();
             return Ok(authors);
         }
-        [HttpGet("/{id}")]
+        [HttpGet("/author/{id}")]
         public async Task<ActionResult<ResponseModel<Author>>> GetAuthorById(int id)
         {
             var author = await _authorInterface.GetAuthorById(id);
