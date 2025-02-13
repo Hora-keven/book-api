@@ -15,7 +15,7 @@ namespace WebApi.Controllers
             _tokenGenerator = tokenGenerator;
         }
 
-        [HttpPost("/login"), Authorize]
+        [HttpPost("/login"), AllowAnonymous]
         public ActionResult<LoginResponseModel> GenerateToken([FromBody] LoginRequestModel loginRequestModel)
         {
             var response = new LoginResponseModel() { Access_Token = _tokenGenerator.GenerateToken(loginRequestModel.Email!) };
